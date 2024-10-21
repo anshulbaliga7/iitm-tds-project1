@@ -5,18 +5,18 @@ This project is a Python script that scrapes GitHub for user and repository data
 ## Key Points
 
 - The data was scraped from the GitHub API using Python's requests library and cURL commands to make auth GET requests to specific URL endpoints, structured as https://api.github.com/users/{username} for user details and https://api.github.com/users/{username}/repos for repositories, with results saved as CSV files(users.csv and repositories.csv) for analysis.
-- A surprising finding from the data analysis was that many users have minimal public repositories despite having a large number of followers as can be seen in **curl-followers-tokyo.json**, indicating potential engagement without active project contributions.
+- A surprising finding from the data analysis was that many users have minimal public repositories despite having a large number of followers as can be seen in [curl-followers-tokyo.json](curl-followers-tokyo.json), indicating potential engagement without active project contributions.
 - Developers are recommended to focus on building a presence on GitHub by contributing to open-source projects, as active participation can enhance their experience, learning and attract more followers.
 
 ## My Approach
 HLD for this project:
 ![High Level Design](tds-project-hld.png)
 
-1. **API Requests**: I used cURL to make API requests to the GitHub API to retrieve user and repository data. The data was saved as JSON files **curl-followers-tokyo.json** for further analysis.
+1. **API Requests**: I used cURL to make API requests to the GitHub API to retrieve user and repository data. The data was saved as JSON files [curl-followers-tokyo.json](curl-followers-tokyo.json) for further analysis.
 
-2. **Data Analysis**: I then created a Python script **script.py** to collect all the data and save it as CSV files(users.csv and repositories.csv).
+2. **Data Analysis**: I then created a Python script [script.py](script.py) to collect all the data and save it as CSV files(users.csv and repositories.csv).
 
-3. **Data Visualization**: I used the Pandas library to analyze the data and generate insights to answer the 16 questions on the portal. The script **analyze.py** or **analyze.ipynb** reads the CSV files and generates visualizations to identify trends and patterns in the data.
+3. **Data Visualization**: I used the Pandas library to analyze the data and generate insights to answer the 16 questions on the portal. The script [analyze.py](analyze.py) or [analyze.ipynb](analyze.ipynb) reads the CSV files and generates visualizations to identify trends and patterns in the data.
 
 ## Prerequisites
 
