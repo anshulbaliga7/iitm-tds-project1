@@ -8,10 +8,23 @@ TOKEN = os.getenv('GITHUB_TOKEN')
 HEADERS = {'Authorization': f'token {TOKEN}'}
 
 def get_users():
-    url = 'https://api.github.com/search/users?q=location:Tokyo+followers:>200&per_page=100'
-    response = requests.get(url, headers=HEADERS)
-    response.raise_for_status()  
-    return response.json()['items']
+    users = []
+    page = 1
+    
+    while True:
+        url = f'https://api.github.com/search/users?q=location:Tokyo+followers:>200&per_page=100&page={page}'
+        response = requests.get(url, headers=HEADERS)
+        response.raise_for_status()  
+        
+        data = response.json()
+        users.extend(data['items'])  
+
+        if len(data['items']) < 100:  
+            break
+        
+        page += 1  
+
+    return users
 
 def get_user_details(username):
     url = f'https://api.github.com/users/{username}'
@@ -27,7 +40,7 @@ def get_user_repositories(username):
 
 # Write users.csv
 def write_users_csv(users):
-    with open('users.csv', mode='w', newline='', encoding='utf-8') as file:
+    with open('users1.csv', mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['login', 'name', 'company', 'location', 'email', 'hireable', 'bio', 'public_repos', 'followers', 'following', 'created_at'])
         for user in users:
@@ -46,7 +59,7 @@ def write_users_csv(users):
             ])
 
 def write_repositories_csv(repositories):
-    with open('repositories.csv', mode='w', newline='', encoding='utf-8') as file:
+    with open('repositories1.csv', mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['login', 'full_name', 'created_at', 'stargazers_count', 'watchers_count', 'language', 'has_projects', 'has_wiki', 'license_name'])
         for repo in repositories:
