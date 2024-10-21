@@ -2,10 +2,11 @@
 
 This project is a Python script that scrapes GitHub for user and repository data, focusing on users located in Tokyo with over 200 followers.
 
-## Key Points
+## Key Points To Review
 
 - The data was scraped from the GitHub API using Python's requests library and cURL commands to make auth GET requests to specific URL endpoints, structured as https://api.github.com/users/{username} for user details and https://api.github.com/users/{username}/repos for repositories, with results saved as CSV files(users.csv and repositories.csv) for analysis.
 - A surprising finding from the data analysis was that many users have minimal public repositories despite having a large number of followers as can be seen in [curl-followers-tokyo.json](curl-followers-tokyo.json), indicating potential engagement without active project contributions.
+![Public repos vs Number of followers](interesting-fact.png)
 - Developers are recommended to focus on building a presence on GitHub by contributing to open-source projects, as active participation can enhance their experience, learning and attract more followers.
 
 ## My Approach
