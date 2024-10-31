@@ -1,41 +1,41 @@
 Ans 1: Top 5 users with the highest number of followers: dennybritz, wasabeef, dai-shi, rui314, domenic
-Ans 2: 5 earliest registered GitHub users: kana, naoya, ko1, amatsuda, masuidrive
-Ans 3 : Top 3 most popular licenses: mit, other, apache-2.0
-Majority of these developers work at: CYBERAGENT, INC.
+Ans 2: 5 earliest registered GitHub users: kana, kakutani, mootoh, lhl, walf443
+Ans 3 : Top 3 most popular licenses: mit, apache-2.0, other
+Majority of these developers work at: GOOGLE
 Ans 5 : Most popular programming language: JavaScript
-Ans 6 : Second most popular language among users who joined after 2020: JavaScript
+Ans 6 : Second most popular language among users who joined after 2020: Rust
 Ans 7 : Language with the highest average number of stars per repository: Assembly
 Ans 8 : Top 5 users in terms of leader_strength: blueimp, dai-shi, asahilina, pilcrowonpaper, marcan
-Ans 9 : Correlation between followers and repos: -0.134
-Ans 10 : Regression slope of followers on repos: -0.746
-Ans 11 : Correlation between projects_enabled and wiki_enabled: 0.475
+Ans 9 : Correlation between followers and repos: 0.051
+Ans 10 : Regression slope of followers on repos: 0.282
+Ans 11 : Correlation between projects_enabled and wiki_enabled: 0.38
 Ans 12: Average following difference (hireable - non-hireable): nan
-Ans 13 : Correlation of bio length with followers: 0.134
+Ans 13 : Correlation of bio length with followers: 0.088
                             OLS Regression Results
 ==============================================================================
-Dep. Variable:              followers   R-squared:                       0.018
-Model:                            OLS   Adj. R-squared:                  0.004
-Method:                 Least Squares   F-statistic:                     1.255
-Date:                Mon, 21 Oct 2024   Prob (F-statistic):              0.267
-Time:                        09:50:42   Log-Likelihood:                -631.77
-No. Observations:                  71   AIC:                             1268.
-Df Residuals:                      69   BIC:                             1272.
+Dep. Variable:              followers   R-squared:                       0.008
+Model:                            OLS   Adj. R-squared:                  0.005
+Method:                 Least Squares   F-statistic:                     2.933
+Date:                Mon, 21 Oct 2024   Prob (F-statistic):             0.0876
+Time:                        11:34:30   Log-Likelihood:                -3169.4
+No. Observations:                 380   AIC:                             6343.
+Df Residuals:                     378   BIC:                             6351.
 Df Model:                           1
 Covariance Type:            nonrobust
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const       1629.1382    412.502      3.949      0.000     806.219    2452.057
-bio_length     6.1548      5.495      1.120      0.267      -4.807      17.117
+const        538.1814     90.541      5.944      0.000     360.155     716.208
+bio_length     2.1962      1.282      1.713      0.088      -0.325       4.718
 ==============================================================================
-Omnibus:                       51.610   Durbin-Watson:                   0.101
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              176.344
-Skew:                           2.341   Prob(JB):                     5.10e-39
-Kurtosis:                       9.138   Cond. No.                         145.
+Omnibus:                      424.460   Durbin-Watson:                   0.045
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            19013.781
+Skew:                           5.108   Prob(JB):                         0.00
+Kurtosis:                      36.114   Cond. No.                         123.
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-Ans 14 : Top 5 users who created most repositories on weekends: kana, ishkawa, smorimoto, hajimehoshi, wkentaro
+Ans 14 : Top 5 users who created most repositories on weekends: h6ah4i, qnighy, syumai, kevincobain2000, yutkat
 Ans 15 : Difference in email fractions (hireable - non-hireable): nan
-Ans 16 : Most common surname: Wada with 2 users
+Ans 16 : Most common surname: Tanaka with 5 users
